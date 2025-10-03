@@ -5,7 +5,7 @@ const historyTableBody = document.getElementById("historyTableBody"); // Table b
 
 // Function to save search to localStorage
 function saveSearch(query) {
-    let searchHistory = JSON.parse(localStorage.getItem("searchHistory"))  [];
+    let searchHistory = JSON.parse(localStorage.getItem("searchHistory"))  || [];
     if (!searchHistory.includes(query)) {
         searchHistory.push(query);
         localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
@@ -14,7 +14,7 @@ function saveSearch(query) {
 
 // Function to load search history into the table
 function loadSearchHistory() {
-    const searchHistory = JSON.parse(localStorage.getItem("searchHistory"))  [];
+    const searchHistory = JSON.parse(localStorage.getItem("searchHistory")) || [];
     historyTableBody.innerHTML = ""; // Clear the table body before populating
 
     searchHistory.forEach((name, index) => {
@@ -28,8 +28,6 @@ function loadSearchHistory() {
         nameCell.textContent = name; // Name
         phonenumberCell.textContent = phonenumber; // Phonenumber
         LocationCell.textContent = Location; // Location
-        Time inCell.textContent = Time in; // Time in
-        Time outCell.textContent = Time out; // Time out
         PassengerCell.textContent = Passenger; // Passenger
         row.appendChild(nameCell);
 
