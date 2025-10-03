@@ -1,0 +1,43 @@
+// Select elements
+const searchInput = document.getElementById("searchInput"); // Replace with your search input ID
+const searchButton = document.getElementById("searchButton"); // Replace with your search button ID
+const historyList = document.getElementById("historyList"); // Replace with your history display container ID
+
+// Function to save search to localStorage
+function saveSearch(query) {
+    let searchHistory = JSON.parse(localStorage.getItem("searchHistory"))  [];
+    if (!searchHistory.includes(query)) {
+        searchHistory.push(query);
+        localStorage.setItem("searchHistory", JSON.stringify(searchHistory));
+    }
+}
+
+// Function to load search history
+function loadSearchHistory() {
+    const searchHistory = JSON.parse(localStorage.getItem("searchHistory"))  [];
+    historyList.innerHTML = ""; // Clear the list before populating
+    searchHistory.forEach((search) => {
+        const listItem = document.createElement("li");
+        listItem.textContent = search;
+        listItem.classList.add("history-item"); // Add your CSS class for styling
+        listItem.addEventListener("click", () => {
+            searchInput.value = search; // Populate input when history item is clicked
+        });
+        historyList.appendChild(listItem);
+    });
+}
+
+// Function to handle search
+function handleSearch() {
+    const query = searchInput.value.trim();
+    if (query) {
+        saveSearch(query);
+        loadSearchHistory(); // Refresh the history list
+    }
+}
+
+// Load history on page load
+document.addEventListener("DOMContentLoaded", loadSearchHistory);
+
+// Attach event listener to the search button
+searchButton.addEventListener("click", handleSearch);

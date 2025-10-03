@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/index.css">
+    <link rel="shortcut icon" href="/image/logo 2.jpg" type="image/x-icon" />
+    <title>Login</title>
+  </head>
+  <body>
+    <div class="login">
+      <h2>Login</h2>
+      <form action="/html/login.html" id="formcreate" target="_blank">
+        <input
+          type="text"
+          name="username"
+          id="username"
+          placeholder="Username"
+          required
+        />
+        <input
+          type="text"
+          name="email"
+          id="email"
+          placeholder="Email"
+          required
+        />
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          required
+        />
+        <input
+          type="password"
+          name="cfpassword"
+          id="cfpassword"
+          placeholder="Confirm Password"
+          required
+        />
+        <button type="submit">Register Now</button><br /><br />
+        <div class="link" style="text-align: center">
+          <p>Already have an account? <a href="/html/login.html">Login </a>.</p>
+        </div>
+      </form>
+    </div>
+    <script src="/javascript/sweetalert.js"></script>
+    <script src="/javascript/index.js"></script>
+    <script src="/javascript/button_save.js"></script>
+  </body>
+</html>

@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-image: url("/image/Login\ \(2\).jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+.login {
+  background-color: #ffffffaa;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+.login h2 {
+  margin: 0 0 20px;
+  text-align: center;
+}
+.login input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.login button {
+  width: 90%;
+  padding: 10px;
+  background-color: #28a745;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+.login-container button:hover {
+  background-color: #01801d;
+}

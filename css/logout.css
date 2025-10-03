@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Saira", sans-serif;
+  background-image: url("/image/Premium.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.logout {
+  width: 400px;
+  padding: 30px 20px;
+  margin-top: 70px;
+  border-radius: 10px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.515);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+h1 {
+  font-size: 30px;
+  color: white;
+}
+p {
+  font-size: 20px;
+  color: white;
+}
+.login {
+  margin-top: 20px;
+  padding: 15px 20px;
+  font-size: 25px;
+  color: #fff;
+  background-color: rgba(9, 237, 9, 0.88);
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.login:hover {
+  background-color: green;
+}
